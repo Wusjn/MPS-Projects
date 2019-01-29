@@ -1,6 +1,6 @@
-# MPS-Projects
+# MPS-Project
 
-This projects aims to create a simpler version of Java libraries which can be easily used by new programmers (or one without programming experience).
+This project aims to create a simpler version of Java libraries which can be easily used by new programmers (or one without programming experience).
 
 For each target library, we utilized MPS to design a DSL, which can be easily used to generated java code using the library.
 
