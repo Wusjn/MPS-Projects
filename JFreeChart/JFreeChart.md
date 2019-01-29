@@ -24,4 +24,4 @@
 ## Used languages
 
 1. `jetbrains.mps.baselanguage`
-2. `POI`
+2. `JFreeChart`
