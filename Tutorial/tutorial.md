@@ -1,229 +1,175 @@
-#MPS插件JavaPoiExtention使用教程
-##目录
-1. 在MPS中安装JavaPoiExtention插件
-2. 在新项目中使用JavaPoiExtention插件
-3. 利用JavaPoiExtention插件写代码
+#How to use our plugins to write code in MPS
 
+##index
 
-##在MPS中安装JavaPoiExtention插件
+1. Install plugins in MPS
+2. Some initialization before using plugin in a new project
+3. An example of using our plugin to write code in MPS
+
+##Install plugin in MPS
+
 ###for mac os
-1. 打开MPS
-2. 点击左上角的`MPS`——>`Preference`
-3. 在打开的窗口中选中`Plugins`
-4. 点击右下角的`Install plugin from disk`
-5. 在打开的窗口中选中`JavaPoiExtention.zip`文件
-6. 点击`Restart Jetbrains MPS`，自动重启后插件就可以用了
+1. open MPS
+2. click `MPS`——>`Preference` on the upper-left corner
+3. select `Plugins` in the popup
+4. click `Install plugin from disk` on the lower-right corner
+5. select `JavaPoiExtention.zip` in the popup
+6. click `Restart Jetbrains MPS`，the plugin will be available after the restart
 
 ###for windows
 
-1. 打开MPS
-2. 点击左上角的`File`——>`Settings`
-3. 在打开的窗口中选中`Plugins`
-4. 点击右上角的齿轮图标，选取弹出菜单的`Install Plugin from Disk`
-5. 在打开的窗口中选中`JavaPoiExtention.zip`文件
-6. 之后会显示新增的插件，选中它，点击`Restart IDE`，自动重启后插件就可以用了
+1. open MPS
+2. click `File`——>`Settings` on the upper-left corner
+3. select `Plugins` in the popup
+4. click the gear on the upper-right corner, select `Install Plugin from Disk` in the popup
+5. select `JavaPoiExtention.zip` in the popup
+6. click `Restart IDE`，the plugin will be available after the restart
 
-##在新项目中使用JavaPoiExtention插件
-###for mac os
-1. 打开MPS
+##Some initialization before using plugin in a new project
 
-2. 点击`Create New Project`
+1. open MPS
 
-3. 左边选中`Solution Project`，右边填写`Project Name`以及`Solution Name`，点击`OK`
+2. click `Create New Project`
 
-4. 在solution中新建一个model
+3. select `Solution Project` on the left hand，fill in `Project Name` and `Solution Name` on the right hand，click`OK`
+
+4. create a new model in the solution
 
     ![](./pictures/installation/1.png)
 
-5. 填写model的名字
+5. fill in the name of the model, click `OK`
 
     ![](./pictures/installation/2.png)
 
-6. 在弹出的窗口中设置model的`dependencies`和`used languwages`,具体如下
+6. set the `dependencies` and `used languwages` of the model in the popup (here we use JavaPpoiExtension as an example. for the `dependencies` and `used languwages` of other plugin, please go to the corresponding plugin folder and read the plugin-specific manual)
 
-
-7. 设置依赖`java:org.apache.poi.ss.usermodel`
+7. add dependency `org.apache.poi.ss.usermodel`
 
     ![](./pictures/installation/3.png)
 
-8. 设置依赖`java:org.apache.poi.hssf.usermodel`
+8. add dependency `org.apache.poi.hssf.usermodel`
 
     ![](./pictures/installation/4.png)
 
-9. 添加语言`POI`
+9. add languwage `POI`
 
     ![](./pictures/installation/5.png)
 
-10. 添加语言`jetbrains.mps.baselanguage`
+10. add languwage `jetbrains.mps.baselanguage`
 
     ![](./pictures/installation/6.png)
 
-11. 至此，所有的依赖都设置完毕，可以开始写代码了
-
-###for Windows
-
-操作和mac os完全一样
 
 
-##利用JavaPoiExtention插件写代码
+##An example of using our plugin to write code in MPS
 
-###功能目录
+Here we use JavaPpoiExtension as an example.
 
-1. `CreateNewHSSFWorkbook`
+###Some keyboard shortcut
 
-    创建一个新的`HSSFWorkbook`，最后关闭它
-    
-2. `ReadWorkbook`
+these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
 
-    从文件中读出一个`Workbook`，最后关闭它
-    
-3. `CreateCellBlock`
+1. `complete smart`：we use`alt`+`space`
+2. `intentions`：list all intention functions，it can't be changed，we use `alt`+`enter`
+3. `Expand Selection`：expand selection on the AST, we use `command`+`up`
+4. `Shrink Selection`：shrink selection on the AST, we use `command`+`down`
+5. `Select Previous`：select previous line, we use `shift`+`up`
+6. `Select Next` ：select next line, we use `shift`+`down`
+7. `copy & paste`：we use `ctrl`+`c`，`ctrl`+`v`
 
-    在一个`Sheet`中创建一个方形`Cell`块
-    
-4. `IterateWorkbook`
+###An example
 
-    遍历一个`Workbook`，只遍历非空的`Cell`
-    
-5. `IterateSheet`
-
-    遍历一个`Sheet`，可以对空行和空单元格作出处理
-    
-6. `SwitchCell`
-
-    根据`Cell`的类型作出不同处理
-    
-7. `setCellColoe`
-
-    设置单元格颜色
-    
-8. `setCellFont`
-
-    设置单元格字体
-    
-9. `GetCellContent`
-
-    以`String`的姓氏获得单元格的内容
-    
-10. `GetTextFromWorkbook`
-
-    获得`Workbook`的所有内容，以`String`的形式
-    
-
-###一些快捷键
-先是几个重要的MPS快捷键，它们可以在`MPS`-->`Preference`-->`keymap`中调整
-
-1. `complete smart`：补全键，作者使用`alt`+`space`
-2. `intentions`：列出可选的功能，这个不能改键位，mac上是`alt`+`enter`
-3. `Expand Selection`：AST中扩大选中范围，作者使用`command`+`up`
-4. `Shrink Selection`：AST中缩小选中范围，作者使用`command`+`down`
-5. `Select Previous`：扩大选中范围，选中上一行，作者使用`shift`+`up`
-6. `Select Next` ：扩大选中范围，选中下一行，作者使用`shift`+`down`
-7. `copy & paste`：复制粘贴，作者使用`ctrl`+`c`，`ctrl`+`v`
-
-###一个例子
-
-###for mac os
-
-这里用一个例子展示如何用JavaPoiExtention写代码
-
-1. 在model中创建一个java class
+1. create a java class in the model
 
     ![](./pictures/example/0.png)
 
-2. 填写好类名与main函数（psvm）之后，输入`crea`，敲击快捷键`ctrl`+`space`,选中`CreateNewHSSFWorkbook`，创建一个新的工作簿
+2. after filling in the class name and main function(psvm), type in `crea` and press `ctrl`+`space`, then pick `CreateNewHSSFWorkbook` to create a new workbook
 
     ![](./pictures/example/1.png)
 
-3. 填充空缺的单元，方法类似前一步骤（利用快捷键`ctrl`+`space`）
+3. fill the empty cells(just like what we do in the previous step) 
 
     ![](./pictures/example/2.png)
 
-4. 在中间的空语句块中写代码，先创建一个`Sheet`
+4. create a sheet in our workbook
 
     ![](./pictures/example/3.png)
 
-5. 在刚创建的`sheet`中填充一些单元格
+5. create some cells in our sheet
 
     ![](./pictures/example/4.png)
 
-6. 单元格范围是(0,0)到(10，10)，
-
+6. the range of the cell block is from (0,0) to (10,10)
     ![](./pictures/example/5.png)
 
-7. 单元类型是`CellType.NUMERIC`，对每个单元设置它的值为2
+7. the cell type is `CellType.NUMERIC`，and set it's value to 2
 
     ![](./pictures/example/6.png)
 
-8. 遍历一个表格，包括空行和空单元
-
+8. iterate a sheet, including it's empty rows and empty cells
     ![](./pictures/example/7.png)
 
-9. 在对应部分填充处理语句
+9. fill in some processing statements in corresponding block
 
     ![](./pictures/example/8.png)
 
-10. 对每个非空单元作出处理，根据单元格类型进行不同处理
+10. deal with each nonempty cell according to their types
 
     ![](./pictures/example/9.png)
 
-11. 打印单元格内容，如果是`NUMERIC`类型，将其值设置为1
+11. print cell content, if it's a `NUMERIC` cell, set it's value to 1
 
     ![](./pictures/example/10.png)
 
-12. 设置单元格字体颜色
+12. set cell color
 
     ![](./pictures/example/11.png)
 
-13. 前景水色背景红色，填充方式为`BIG_SPOTS`
+13. set foreground color to AQUA and background color to RED, and the fill pattern to BIG_SPOTS
 
     ![](./pictures/example/12.png)
 
-14. 设置单元格字体
+14. set cell font
 
     ![](./pictures/example/13.png)
 
-15. 字体名字为`Courier New`，大小为24磅，斜体加粗，没有删除线
+15. name it as `Courier New`，and set some properties
 
     ![](./pictures/example/14.png)
 
-16. 将`Workbook`中的所有内容取出
+16. get the content of the workbook
 
     ![](./pictures/example/15.png)
 
-17. 公式不包括在结果中，也不包括`Sheet`的名字，将`Workbook`的内容`content`打印出来
+17. print the content of the workbook
 
     ![](./pictures/example/16.png)
 
-18. 运行该类的main函数
+18. run the main function of the class
 
     ![](./pictures/example/17.png)
 
-19. 部分输出结果如图，程序正常结束
+19. some outputs
 
     ![](./pictures/example/18.png)
 
-20. 在编辑器中点击右键，查看生成的java代码
+20. right click in the editor, select `Preview Generated Text`
 
     ![](./pictures/example/19.png)
 
-21. 产生的java代码（部分）如图所示
+21. part of the automatically generated java code
 
     ![](./pictures/example/20.png)
     
-###for windows
+###how to set the working directory：
 
-与mac os版一样
+1. open `Run` menu，select `Edit Configurations`
+
+    ![](./pictures/working_directory/1.png)
     
-###设置工作目录的方法：
+2. edit `Working directory`
 
-1. 打开`Run`菜单，选取`Edit Configurations`
-
-    ![](./pictures/windos/1.png)
-    
-2. 编辑对应类的`Working directory`
-
-    ![](./pictures/windos/2.png)
-     
+    ![](./pictures/working_directory/2.png)
+ 
 
 ##This Complete the Tutorial

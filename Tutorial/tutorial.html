@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>tutorial</title>
+<title>Tutorial</title>
 
 
 <style type="text/css">
@@ -468,213 +468,163 @@ pre[class*="language-"] {
 
 <body>
 
-<h1 id="toc_0">MPS插件JavaPoiExtention使用教程</h1>
+<h1 id="toc_0">How to use our plugins to write code in MPS</h1>
 
-<h2 id="toc_1">目录</h2>
+<h2 id="toc_1">index</h2>
 
 <ol>
-<li>在MPS中安装JavaPoiExtention插件</li>
-<li>在新项目中使用JavaPoiExtention插件</li>
-<li>利用JavaPoiExtention插件写代码</li>
+<li>Install plugins in MPS</li>
+<li>Some initialization before using plugin in a new project</li>
+<li>An example of using our plugin to write code in MPS</li>
 </ol>
 
-<h2 id="toc_2">在MPS中安装JavaPoiExtention插件</h2>
+<h2 id="toc_2">Install plugin in MPS</h2>
 
 <h3 id="toc_3">for mac os</h3>
 
 <ol>
-<li>打开MPS</li>
-<li>点击左上角的<code>MPS</code>——&gt;<code>Preference</code></li>
-<li>在打开的窗口中选中<code>Plugins</code></li>
-<li>点击右下角的<code>Install plugin from disk</code></li>
-<li>在打开的窗口中选中<code>JavaPoiExtention.zip</code>文件</li>
-<li>点击<code>Restart Jetbrains MPS</code>，自动重启后插件就可以用了</li>
+<li>open MPS</li>
+<li>click <code>MPS</code>——&gt;<code>Preference</code> on the upper-left corner</li>
+<li>select <code>Plugins</code> in the popup</li>
+<li>click <code>Install plugin from disk</code> on the lower-right corner</li>
+<li>select <code>JavaPoiExtention.zip</code> in the popup</li>
+<li>click <code>Restart Jetbrains MPS</code>，the plugin will be available after the restart</li>
 </ol>
 
 <h3 id="toc_4">for windows</h3>
 
 <ol>
-<li>打开MPS</li>
-<li>点击左上角的<code>File</code>——&gt;<code>Settings</code></li>
-<li>在打开的窗口中选中<code>Plugins</code></li>
-<li>点击右上角的齿轮图标，选取弹出菜单的<code>Install Plugin from Disk</code></li>
-<li>在打开的窗口中选中<code>JavaPoiExtention.zip</code>文件</li>
-<li>之后会显示新增的插件，选中它，点击<code>Restart IDE</code>，自动重启后插件就可以用了</li>
+<li>open MPS</li>
+<li>click <code>File</code>——&gt;<code>Settings</code> on the upper-left corner</li>
+<li>select <code>Plugins</code> in the popup</li>
+<li>click the gear on the upper-right corner, select <code>Install Plugin from Disk</code> in the popup</li>
+<li>select <code>JavaPoiExtention.zip</code> in the popup</li>
+<li>click <code>Restart IDE</code>，the plugin will be available after the restart</li>
 </ol>
 
-<h2 id="toc_5">在新项目中使用JavaPoiExtention插件</h2>
-
-<h3 id="toc_6">for mac os</h3>
+<h2 id="toc_5">Some initialization before using plugin in a new project</h2>
 
 <ol>
-<li><p>打开MPS</p></li>
-<li><p>点击<code>Create New Project</code></p></li>
-<li><p>左边选中<code>Solution Project</code>，右边填写<code>Project Name</code>以及<code>Solution Name</code>，点击<code>OK</code></p></li>
-<li><p>在solution中新建一个model</p>
+<li><p>open MPS</p></li>
+<li><p>click <code>Create New Project</code></p></li>
+<li><p>select <code>Solution Project</code> on the left hand，fill in <code>Project Name</code> and <code>Solution Name</code> on the right hand，click<code>OK</code></p></li>
+<li><p>create a new model in the solution</p>
 
 <p><img src="./pictures/installation/1.png" alt=""></p></li>
-<li><p>填写model的名字</p>
+<li><p>fill in the name of the model, click <code>OK</code></p>
 
 <p><img src="./pictures/installation/2.png" alt=""></p></li>
-<li><p>在弹出的窗口中设置model的<code>dependencies</code>和<code>used languwages</code>,具体如下</p></li>
-<li><p>设置依赖<code>java:org.apache.poi.ss.usermodel</code></p>
+<li><p>set the <code>dependencies</code> and <code>used languwages</code> of the model in the popup (here we use JavaPpoiExtension as an example. for the <code>dependencies</code> and <code>used languwages</code> of other plugin, please go to the corresponding plugin folder and read the plugin-specific manual)</p></li>
+<li><p>add dependency <code>org.apache.poi.ss.usermodel</code></p>
 
 <p><img src="./pictures/installation/3.png" alt=""></p></li>
-<li><p>设置依赖<code>java:org.apache.poi.hssf.usermodel</code></p>
+<li><p>add dependency <code>org.apache.poi.hssf.usermodel</code></p>
 
 <p><img src="./pictures/installation/4.png" alt=""></p></li>
-<li><p>添加语言<code>POI</code></p>
+<li><p>add languwage <code>POI</code></p>
 
 <p><img src="./pictures/installation/5.png" alt=""></p></li>
-<li><p>添加语言<code>jetbrains.mps.baselanguage</code></p>
+<li><p>add languwage <code>jetbrains.mps.baselanguage</code></p>
 
 <p><img src="./pictures/installation/6.png" alt=""></p></li>
-<li><p>至此，所有的依赖都设置完毕，可以开始写代码了</p></li>
 </ol>
 
-<h3 id="toc_7">for Windows</h3>
+<h2 id="toc_6">An example of using our plugin to write code in MPS</h2>
 
-<p>操作和mac os完全一样</p>
+<p>Here we use JavaPpoiExtension as an example.</p>
 
-<h2 id="toc_8">利用JavaPoiExtention插件写代码</h2>
+<h3 id="toc_7">Some keyboard shortcut</h3>
 
-<h3 id="toc_9">功能目录</h3>
+<p>these shortcuts can be modified through <code>MPS</code>--&gt;<code>Preference</code>--&gt;<code>keymap</code></p>
 
 <ol>
-<li><p><code>CreateNewHSSFWorkbook</code></p>
-
-<p>创建一个新的<code>HSSFWorkbook</code>，最后关闭它</p></li>
-<li><p><code>ReadWorkbook</code></p>
-
-<p>从文件中读出一个<code>Workbook</code>，最后关闭它</p></li>
-<li><p><code>CreateCellBlock</code></p>
-
-<p>在一个<code>Sheet</code>中创建一个方形<code>Cell</code>块</p></li>
-<li><p><code>IterateWorkbook</code></p>
-
-<p>遍历一个<code>Workbook</code>，只遍历非空的<code>Cell</code></p></li>
-<li><p><code>IterateSheet</code></p>
-
-<p>遍历一个<code>Sheet</code>，可以对空行和空单元格作出处理</p></li>
-<li><p><code>SwitchCell</code></p>
-
-<p>根据<code>Cell</code>的类型作出不同处理</p></li>
-<li><p><code>setCellColoe</code></p>
-
-<p>设置单元格颜色</p></li>
-<li><p><code>setCellFont</code></p>
-
-<p>设置单元格字体</p></li>
-<li><p><code>GetCellContent</code></p>
-
-<p>以<code>String</code>的姓氏获得单元格的内容</p></li>
-<li><p><code>GetTextFromWorkbook</code></p>
-
-<p>获得<code>Workbook</code>的所有内容，以<code>String</code>的形式</p></li>
+<li><code>complete smart</code>：we use<code>alt</code>+<code>space</code></li>
+<li><code>intentions</code>：list all intention functions，it can&#39;t be changed，we use <code>alt</code>+<code>enter</code></li>
+<li><code>Expand Selection</code>：expand selection on the AST, we use <code>command</code>+<code>up</code></li>
+<li><code>Shrink Selection</code>：shrink selection on the AST, we use <code>command</code>+<code>down</code></li>
+<li><code>Select Previous</code>：select previous line, we use <code>shift</code>+<code>up</code></li>
+<li><code>Select Next</code> ：select next line, we use <code>shift</code>+<code>down</code></li>
+<li><code>copy &amp; paste</code>：we use <code>ctrl</code>+<code>c</code>，<code>ctrl</code>+<code>v</code></li>
 </ol>
 
-<h3 id="toc_10">一些快捷键</h3>
-
-<p>先是几个重要的MPS快捷键，它们可以在<code>MPS</code>--&gt;<code>Preference</code>--&gt;<code>keymap</code>中调整</p>
+<h3 id="toc_8">An example</h3>
 
 <ol>
-<li><code>complete smart</code>：补全键，作者使用<code>alt</code>+<code>space</code></li>
-<li><code>intentions</code>：列出可选的功能，这个不能改键位，mac上是<code>alt</code>+<code>enter</code></li>
-<li><code>Expand Selection</code>：AST中扩大选中范围，作者使用<code>command</code>+<code>up</code></li>
-<li><code>Shrink Selection</code>：AST中缩小选中范围，作者使用<code>command</code>+<code>down</code></li>
-<li><code>Select Previous</code>：扩大选中范围，选中上一行，作者使用<code>shift</code>+<code>up</code></li>
-<li><code>Select Next</code> ：扩大选中范围，选中下一行，作者使用<code>shift</code>+<code>down</code></li>
-<li><code>copy &amp; paste</code>：复制粘贴，作者使用<code>ctrl</code>+<code>c</code>，<code>ctrl</code>+<code>v</code></li>
-</ol>
-
-<h3 id="toc_11">一个例子</h3>
-
-<h3 id="toc_12">for mac os</h3>
-
-<p>这里用一个例子展示如何用JavaPoiExtention写代码</p>
-
-<ol>
-<li><p>在model中创建一个java class</p>
+<li><p>create a java class in the model</p>
 
 <p><img src="./pictures/example/0.png" alt=""></p></li>
-<li><p>填写好类名与main函数（psvm）之后，输入<code>crea</code>，敲击快捷键<code>ctrl</code>+<code>space</code>,选中<code>CreateNewHSSFWorkbook</code>，创建一个新的工作簿</p>
+<li><p>after filling in the class name and main function(psvm), type in <code>crea</code> and press <code>ctrl</code>+<code>space</code>, then pick <code>CreateNewHSSFWorkbook</code> to create a new workbook</p>
 
 <p><img src="./pictures/example/1.png" alt=""></p></li>
-<li><p>填充空缺的单元，方法类似前一步骤（利用快捷键<code>ctrl</code>+<code>space</code>）</p>
+<li><p>fill the empty cells(just like what we do in the previous step) </p>
 
 <p><img src="./pictures/example/2.png" alt=""></p></li>
-<li><p>在中间的空语句块中写代码，先创建一个<code>Sheet</code></p>
+<li><p>create a sheet in our workbook</p>
 
 <p><img src="./pictures/example/3.png" alt=""></p></li>
-<li><p>在刚创建的<code>sheet</code>中填充一些单元格</p>
+<li><p>create some cells in our sheet</p>
 
 <p><img src="./pictures/example/4.png" alt=""></p></li>
-<li><p>单元格范围是(0,0)到(10，10)，</p>
-
-<p><img src="./pictures/example/5.png" alt=""></p></li>
-<li><p>单元类型是<code>CellType.NUMERIC</code>，对每个单元设置它的值为2</p>
+<li><p>the range of the cell block is from (0,0) to (10,10)
+<img src="./pictures/example/5.png" alt=""></p></li>
+<li><p>the cell type is <code>CellType.NUMERIC</code>，and set it&#39;s value to 2</p>
 
 <p><img src="./pictures/example/6.png" alt=""></p></li>
-<li><p>遍历一个表格，包括空行和空单元</p>
-
-<p><img src="./pictures/example/7.png" alt=""></p></li>
-<li><p>在对应部分填充处理语句</p>
+<li><p>iterate a sheet, including it&#39;s empty rows and empty cells
+<img src="./pictures/example/7.png" alt=""></p></li>
+<li><p>fill in some processing statements in corresponding block</p>
 
 <p><img src="./pictures/example/8.png" alt=""></p></li>
-<li><p>对每个非空单元作出处理，根据单元格类型进行不同处理</p>
+<li><p>deal with each nonempty cell according to their types</p>
 
 <p><img src="./pictures/example/9.png" alt=""></p></li>
-<li><p>打印单元格内容，如果是<code>NUMERIC</code>类型，将其值设置为1</p>
+<li><p>print cell content, if it&#39;s a <code>NUMERIC</code> cell, set it&#39;s value to 1</p>
 
 <p><img src="./pictures/example/10.png" alt=""></p></li>
-<li><p>设置单元格字体颜色</p>
+<li><p>set cell color</p>
 
 <p><img src="./pictures/example/11.png" alt=""></p></li>
-<li><p>前景水色背景红色，填充方式为<code>BIG_SPOTS</code></p>
+<li><p>set foreground color to AQUA and background color to RED, and the fill pattern to BIG_SPOTS</p>
 
 <p><img src="./pictures/example/12.png" alt=""></p></li>
-<li><p>设置单元格字体</p>
+<li><p>set cell font</p>
 
 <p><img src="./pictures/example/13.png" alt=""></p></li>
-<li><p>字体名字为<code>Courier New</code>，大小为24磅，斜体加粗，没有删除线</p>
+<li><p>name it as <code>Courier New</code>，and set some properties</p>
 
 <p><img src="./pictures/example/14.png" alt=""></p></li>
-<li><p>将<code>Workbook</code>中的所有内容取出</p>
+<li><p>get the content of the workbook</p>
 
 <p><img src="./pictures/example/15.png" alt=""></p></li>
-<li><p>公式不包括在结果中，也不包括<code>Sheet</code>的名字，将<code>Workbook</code>的内容<code>content</code>打印出来</p>
+<li><p>print the content of the workbook</p>
 
 <p><img src="./pictures/example/16.png" alt=""></p></li>
-<li><p>运行该类的main函数</p>
+<li><p>run the main function of the class</p>
 
 <p><img src="./pictures/example/17.png" alt=""></p></li>
-<li><p>部分输出结果如图，程序正常结束</p>
+<li><p>some outputs</p>
 
 <p><img src="./pictures/example/18.png" alt=""></p></li>
-<li><p>在编辑器中点击右键，查看生成的java代码</p>
+<li><p>right click in the editor, select <code>Preview Generated Text</code></p>
 
 <p><img src="./pictures/example/19.png" alt=""></p></li>
-<li><p>产生的java代码（部分）如图所示</p>
+<li><p>part of the automatically generated java code</p>
 
 <p><img src="./pictures/example/20.png" alt=""></p></li>
 </ol>
 
-<h3 id="toc_13">for windows</h3>
-
-<p>与mac os版一样</p>
-
-<h3 id="toc_14">设置工作目录的方法：</h3>
+<h3 id="toc_9">how to set the working directory：</h3>
 
 <ol>
-<li><p>打开<code>Run</code>菜单，选取<code>Edit Configurations</code></p>
+<li><p>open <code>Run</code> menu，select <code>Edit Configurations</code></p>
 
-<p><img src="./pictures/windos/1.png" alt=""></p></li>
-<li><p>编辑对应类的<code>Working directory</code></p>
+<p><img src="./pictures/working_directory/1.png" alt=""></p></li>
+<li><p>edit <code>Working directory</code></p>
 
-<p><img src="./pictures/windos/2.png" alt=""></p></li>
+<p><img src="./pictures/working_directory/2.png" alt=""></p></li>
 </ol>
 
-<h2 id="toc_15">This Complete the Tutorial</h2>
+<h2 id="toc_10">This Complete the Tutorial</h2>
 
 
 
