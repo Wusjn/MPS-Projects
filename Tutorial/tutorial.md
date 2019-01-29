@@ -1,14 +1,14 @@
-#How to use our plugins to write code in MPS
+# How to use our plugins to write code in MPS
 
-##index
+## index
 
 1. Install plugins in MPS
 2. Some initialization before using plugin in a new project
 3. An example of using our plugin to write code in MPS
 
-##Install plugin in MPS
+## Install plugin in MPS
 
-###for mac os
+### for mac os
 1. open MPS
 2. click `MPS`——>`Preference` on the upper-left corner
 3. select `Plugins` in the popup
@@ -16,7 +16,7 @@
 5. select `JavaPoiExtention.zip` in the popup
 6. click `Restart Jetbrains MPS`，the plugin will be available after the restart
 
-###for windows
+### for windows
 
 1. open MPS
 2. click `File`——>`Settings` on the upper-left corner
@@ -25,7 +25,7 @@
 5. select `JavaPoiExtention.zip` in the popup
 6. click `Restart IDE`，the plugin will be available after the restart
 
-##Some initialization before using plugin in a new project
+## Some initialization before using plugin in a new project
 
 1. open MPS
 
@@ -61,11 +61,11 @@
 
 
 
-##An example of using our plugin to write code in MPS
+## An example of using our plugin to write code in MPS
 
 Here we use JavaPpoiExtension as an example.
 
-###Some keyboard shortcut
+### Some keyboard shortcut
 
 these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
 
@@ -77,7 +77,7 @@ these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
 6. `Select Next` ：select next line, we use `shift`+`down`
 7. `copy & paste`：we use `ctrl`+`c`，`ctrl`+`v`
 
-###An example
+### An example
 
 1. create a java class in the model
 
@@ -161,7 +161,7 @@ these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
 
     ![](./pictures/example/20.png)
     
-###how to set the working directory：
+### how to set the working directory：
 
 1. open `Run` menu，select `Edit Configurations`
 
@@ -172,4 +172,4 @@ these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
     ![](./pictures/working_directory/2.png)
  
 
-##This Complete the Tutorial
+## This Complete the Tutorial
