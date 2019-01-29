@@ -100,6 +100,7 @@ these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
     ![](./pictures/example/4.png)
 
 6. the range of the cell block is from (0,0) to (10,10)
+
     ![](./pictures/example/5.png)
 
 7. the cell type is `CellType.NUMERIC`，and set it's value to 2
@@ -107,6 +108,7 @@ these shortcuts can be modified through `MPS`-->`Preference`-->`keymap`
     ![](./pictures/example/6.png)
 
 8. iterate a sheet, including it's empty rows and empty cells
+
     ![](./pictures/example/7.png)
 
 9. fill in some processing statements in corresponding block
