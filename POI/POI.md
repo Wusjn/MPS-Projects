@@ -1,6 +1,6 @@
-#POI
+# POI
 
-##Function menu
+## Function menu
 
 1. create a new HSSF workbook
 2. create a cell block for a sheet
@@ -33,12 +33,12 @@
 29. get cell content (according to the type of the cell)
 30. unhide a row
 
-##Dependencies
+## Dependencies
 
 1. `org.apache.poi.ss.usermodel`
 2. `org.apache.poi.hssf.usermodel`
 
-##Used languages
+## Used languages
 
 1. `jetbrains.mps.baselanguage`
 2. `POI`
